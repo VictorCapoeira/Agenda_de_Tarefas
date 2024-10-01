@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "climatico", "climatico.csproj", "{C82B86D2-C07D-43AC-924A-5F7AC6BA9184}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "agenda", "agenda.csproj", "{FE5E7709-DB66-4F3D-90A6-695A6D4F89D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C82B86D2-C07D-43AC-924A-5F7AC6BA9184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C82B86D2-C07D-43AC-924A-5F7AC6BA9184}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C82B86D2-C07D-43AC-924A-5F7AC6BA9184}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C82B86D2-C07D-43AC-924A-5F7AC6BA9184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE5E7709-DB66-4F3D-90A6-695A6D4F89D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE5E7709-DB66-4F3D-90A6-695A6D4F89D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE5E7709-DB66-4F3D-90A6-695A6D4F89D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE5E7709-DB66-4F3D-90A6-695A6D4F89D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {683370D0-066B-499E-AC4C-B1764600E84C}
+		SolutionGuid = {1A3F995A-DAF5-4112-831D-082876CA259B}
 	EndGlobalSection
 EndGlobal
