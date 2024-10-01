@@ -1,1 +1,3 @@
-﻿
+﻿using System.Net.Http;
+using System.Threading.Tasks;
+//Nas linhas acima, bibliotecas foram chamadas. A primeira será usada para trabalhar com http(url, se for mais facil). Usando essa biblioteca, será possivel fazer requesições http. A segunda será usada para trabalhar em conjunto com a API de clima, pois utilizando essa biblioteca, será possivel gerar uma melhor dinamica com ela. Já que, com essa biblioteca, é possivel alterar o tempo de "reposta" que a aplicação espera. Como uma API será carregada nesse site, essa biblioteca é interresante, pois pode ocorrer de os dados ou requesições feitas a API podem demorar. 
