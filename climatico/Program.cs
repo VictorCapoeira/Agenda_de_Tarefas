@@ -10,4 +10,23 @@ class Program{
     private const string apiUrl = "https://api.openweathermap.org/data/2.5/weather";
     //Para conseguir ter acesso a API é preciso passar a chave dela e a URL. 
 
+     static async Task Main(string[] args){
+        Console.WriteLine("CLIMATICO");
+        Console.Write("Digite o nome da cidade: ");
+        string cidade = Console.ReadLine();
+        //Acima, um texto de referencia foi escrito, solicitando a cidade que o usuario deseja fazer a pesquisa, e logo em seguida, foi coletado esse valor e armazenado na variavel cidade.
+        var weatherData = await GetWeatherAsync(cidade); 
+        //usando var, faz com que o compilador passe a deduzir o tipo de variavel que será retornado pelo metodo. await é uma palavra chave utilizado para indicar que a execução do código deve esperar a conclusão da tarefa(GetWeatherAsync) para avanaçar, assim previnindo erros. GetWeatherAsync(cidade) é metodo que vai buscar os dados climaticos a parti da API. Passamos a cidade que o usuario passou como parametro.
+     }
+    static async Task<string> GetWeatherAsync(string city) {
+        string url = $"{apiUrl}?q={city}&appid={apiKey}&units=metric"; 
+        //criando a variavel que irá fazer a requesição de dados para a API.
+        var response = await client.GetStringAsync(url); 
+        // a variavel response irá guardar os dados da requesição gerados acimna.
+        return response;
+        //Linha para retornar o resultado para o metodo.(ou seja, quando o metodo for chamado, ele terá o response como resultado de reposta)
+    } 
+    
+     
+
 }
