@@ -14,3 +14,27 @@ public class Tarefa{
         Check = false;
     } 
 }
+
+class Program{
+    static List<Tarefa> tarefas = new List<Tarefa>();
+    static int idProx = 1;
+    static bool vef = false;
+    static void Main(String[] args){
+        do{
+            Console.Clear();
+            Console.WriteLine("Agenda de Tarefas");
+            Console.WriteLine("1 - Adicionar tarefa");
+            Console.WriteLine("2 - Listar tarefas");
+            Console.WriteLine("3 - Concluir tarefas");
+            Console.WriteLine("4 - Remover tarefas");
+            Console.WriteLine("5 - Sair");
+
+            string escolhaAcao = Console.ReadLine();
+            /*switch(escolhaAcao){
+                //case "1":
+
+            }*/
+
+        }while(vef == false);
+    }
+}
