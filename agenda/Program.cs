@@ -34,12 +34,28 @@ class Program{
             Console.WriteLine("3 - Concluir tarefas");
             Console.WriteLine("4 - Remover tarefas");
             Console.WriteLine("5 - Sair");
-
             string escolhaAcao = Console.ReadLine();
-            /*switch(escolhaAcao){
-                //case "1":
+            switch(escolhaAcao){
+                case "1":
+                    Adicionar();
+                    break;
+                case "2":
+                    Listar();
+                    break;
+                case "3":
+                    checkTarefas();
+                    break;
+                case "4":
+                    remover();
+                    break;
+                case "5":
+                    vef = true;
+                    return;
+                default:
+                    Console.WriteLine("Opção invalida!");
+                    break;
 
-            }*/
+            }
 
         }while(vef == false);
     }
@@ -50,12 +66,14 @@ class Program{
         string descricao = Console.ReadLine();
         var tarefa = new Tarefa(idProx++, nome, descricao);
         tarefas .Add(tarefa);
+        Console.ReadKey();
     }  
     static void Listar(){
         Console.WriteLine("Tarefas: ");
         foreach(var tarefa in tarefas){
             Console.WriteLine($"{tarefa.Id} - {tarefa.Nome} -- {tarefa.Descricao} -- {(tarefa.Check ? "Concluida" : "Pendente")}");
         }
+        Console.ReadKey();
     }  
     static void checkTarefas(){
         Console.WriteLine("Insira o ID da tarefa que deseja marcar como concluida: ");
@@ -69,6 +87,7 @@ class Program{
             }
         }else
             Console.WriteLine("ID invalido!");
+        Console.ReadKey();
     }  
     static void remover(){
         Console.WriteLine("Insira o ID da tarefa que deseja marcar como concluida: ");
@@ -82,5 +101,6 @@ class Program{
             }
         }else
             Console.WriteLine("ID invalido!");
+        Console.ReadKey();
     }  
 }
