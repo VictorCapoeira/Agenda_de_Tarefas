@@ -42,7 +42,7 @@ class Program{
             }*/
 
         }while(vef == false);
-
+    }
     static void Adicionar(){
         Console.WriteLine("Informe o nome da tarefa: ");
         string nome = Console.ReadLine();
@@ -50,6 +50,11 @@ class Program{
         string descricao = Console.ReadLine();
         var tarefa = new Tarefa(idProx++, nome, descricao);
         tarefas .Add(tarefa);
-    }      
-    }
+    }  
+    static void Listar(){
+        Console.WriteLine("Tarefas: ");
+        foreach(var tarefa in tarefas){
+            Console.WriteLine($"{tarefa.Id} - {tarefa.Nome} -- {tarefa.Descricao} -- {(tarefa.Check ? "Concluida" : "Pendente")}");
+        }
+    }  
 }
