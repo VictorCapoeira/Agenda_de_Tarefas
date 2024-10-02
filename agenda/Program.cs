@@ -57,4 +57,17 @@ class Program{
             Console.WriteLine($"{tarefa.Id} - {tarefa.Nome} -- {tarefa.Descricao} -- {(tarefa.Check ? "Concluida" : "Pendente")}");
         }
     }  
+    static void checkTarefas(){
+        Console.WriteLine("Insira o ID da tarefa que deseja marcar como concluida: ");
+        if(int.TryParse(Console.ReadLine(), out int id)){
+            var tarefa = tarefas.Find(t => t.Id == id);
+            if(tarefa != null){
+                tarefa.Check = true;
+                Console.WriteLine("Tarefa marcada como concluida!");
+            }else{
+                Console.WriteLine("Tarefa não encontrada. Verifique se a tarefa realmente existe!");
+            }
+        }else
+            Console.WriteLine("ID invalido!");
+    }  
 }
