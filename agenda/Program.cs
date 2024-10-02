@@ -15,7 +15,13 @@ public class Tarefa{
     } 
 }
 
+
+
+
 class Program{
+
+    
+
     static List<Tarefa> tarefas = new List<Tarefa>();
     static int idProx = 1;
     static bool vef = false;
@@ -36,5 +42,14 @@ class Program{
             }*/
 
         }while(vef == false);
+
+    static void Adicionar(){
+        Console.WriteLine("Informe o nome da tarefa: ");
+        string nome = Console.ReadLine();
+        Console.WriteLine("Informe a descrição da tarefa: ");
+        string descricao = Console.ReadLine();
+        var tarefa = new Tarefa(idProx++, nome, descricao);
+        tarefas .Add(tarefa);
+    }      
     }
 }
