@@ -70,4 +70,17 @@ class Program{
         }else
             Console.WriteLine("ID invalido!");
     }  
+    static void remover(){
+        Console.WriteLine("Insira o ID da tarefa que deseja marcar como concluida: ");
+        if(int.TryParse(Console.ReadLine(), out int id)){
+            var tarefa = tarefas.Find(t => t.Id == id);
+            if(tarefa != null){
+                tarefas.Remove(tarefa);
+                Console.WriteLine("Tarefa removida!");
+            }else{
+                Console.WriteLine("Tarefa não encontrada. Verifique se a tarefa realmente existe!");
+            }
+        }else
+            Console.WriteLine("ID invalido!");
+    }  
 }
